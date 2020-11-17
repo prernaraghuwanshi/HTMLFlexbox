@@ -1,0 +1,127 @@
+<!doctype html>
+<title>Website Layout</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .leftSideContainer {
+        background: gold;
+        flex: 1;
+        font-size: large;
+    }
+
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        flex: 5;
+    }
+
+    .inner-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inner-col {
+        flex: 4;
+    }
+
+    .inner-row aside {
+        background: aqua;
+        flex: 1;
+        font-size: 20px;
+    }
+
+    .inner-row article {
+        min-height: 30vh;
+    }
+
+    header,
+    footer {
+        background: yellowgreen;
+        font-weight: bold;
+        text-align: center;
+        font-size: 50px;
+        height: 20vh;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+        padding: 1em;
+    }
+</style>
+
+<body>
+    <nav class="leftSideContainer">Navigation
+        <li><a href="https://www.youtube.com">YouTube</a></li>
+        <li><a href="https://www.gmail.com">Gmail</a></li>
+    </nav>
+    <div class="mainContainer">
+        <header><strong>Header</strong></header>
+        <div class="inner-row">
+            <div class="inner-col">
+                <article>
+                    <h2>Cricket</h2>
+                    <p>Cricket is a bat-and-ball game played between two teams of eleven players
+                        on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at each end,
+                        each comprising two bails balanced on three stumps. The batting side scores runs by striking
+                        the ball bowled at the wicket with the bat (and running between the wickets), while the bowling
+                        and fielding side tries to prevent this (by preventing the ball from leaving the field, and
+                        getting
+                        the ball to either wicket) and dismiss each batter (so they are "out"). Means of dismissal
+                        include being bowled,
+                        when the ball hits the stumps and dislodges the bails, and by the fielding side either catching
+                        the ball after it
+                        is hit by the bat, but before it hits the ground, or hitting a wicket with the ball before a
+                        batter can cross the
+                        crease in front of the wicket. When ten batters have been dismissed, the innings ends and the
+                        teams swap roles.
+                        The game is adjudicated by two umpires, aided by a third umpire and match referee in
+                        international matches.
+                        They communicate with two off-field scorers who record the match's statistical information.</p>
+                </article>
+                <article>
+                    <h2>Football</h2>
+                    <p>Football is a family of team sports that involve, to varying degrees, kicking a ball to score a
+                        goal.
+                        Unqualified, the word football normally means the form of football that is the most popular
+                        where the word is used.
+                        Sports commonly called football include association football (known as soccer in some
+                        countries);
+                        gridiron football (specifically American football or Canadian football); Australian rules
+                        football;
+                        rugby football (either rugby union or rugby league); and Gaelic football.
+                        These various forms of football share to varying extent common origins and are known as football
+                        codes.</p>
+                </article>
+                <article>
+                    <h2>Field Hockey</h2>
+                    <p>Field hockey is a widely played team sport of the hockey family. The game can be played on grass,
+                        watered turf,
+                        artificial turf or synthetic field, as well as an indoor boarded surface. Each team plays with
+                        ten field players and a goalkeeper. Players use sticks made of wood, carbon fibre, fibre glass,
+                        or a combination of carbon fibre and fibre glass in different quantities, to hit a round, hard,
+                        plastic hockey ball. The length of the hockey stick is based on the player's individual height:
+                        the top of the stick usually comes to the players hip, and taller players typically have longer
+                        sticks.[1] The sticks have a round side and a flat side, and only the flat face of the stick is
+                        allowed to be used. Use of the other side results in a foul. Goalies often have a different
+                        design of stick, although they can also use an ordinary field hockey stick. The specific
+                        goal-keeping sticks have another curve at the end of the stick, which is to give it more surface
+                        area to block the ball.
+                        The uniform consists of shin guards, shoes, shorts or a skirt, a mouthguard and a jersey.</p>
+                </article>
+                <footer>Footer</footer>
+            </div>
+            <aside>Aside</aside>
+        </div>
+    </div>
+</body>
