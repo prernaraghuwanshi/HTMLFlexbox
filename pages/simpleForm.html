@@ -25,6 +25,7 @@
         <div>
             <label for="email">Email Input Type: </label>
             <input type="email" id="email" name="email">
+            <error-output class="email-error" for="email"></error-output>
         </div>
         <div>
             <label for="url">URL Input Type: </label>
@@ -64,6 +65,14 @@
                 textError.textContent = "";
             else textError.textContent = "Name is incorrect";
         });
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('.email-error');
+        email.oninput = function(){
+            let emailRegex = RegExp('^[a-z0-9]+[_+-\\.]{0,1}[a-z0-9]+@[a-z0-9]+\\.[a-z]{2,}(\\.[a-z]{2,}){0,1}$');
+            if(emailRegex.test(email.value))
+                emailError.textContent = "";
+            else emailError.textContent = "Email is incorrect";
+        };
     </script>
 </body>
 
