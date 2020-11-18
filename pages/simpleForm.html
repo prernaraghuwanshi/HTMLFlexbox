@@ -36,8 +36,9 @@
             <input type="number" id="number" name="number">
         </div>
         <div>
-            <label for="tel">Tel Input Type: </label>
+            <label for="tel">Mobile Input Type: </label>
             <input type="tel" id="tel" name="tel">
+            <error-output class="tel-error" for="tel"></error-output>
         </div>
         <div>
             <label for="search">Search Input Type: </label>
@@ -67,12 +68,21 @@
         });
         const email = document.querySelector('#email');
         const emailError = document.querySelector('.email-error');
-        email.oninput = function(){
+        email.oninput = function () {
             let emailRegex = RegExp('^[a-z0-9]+[_+-\\.]{0,1}[a-z0-9]+@[a-z0-9]+\\.[a-z]{2,}(\\.[a-z]{2,}){0,1}$');
-            if(emailRegex.test(email.value))
+            if (emailRegex.test(email.value))
                 emailError.textContent = "";
             else emailError.textContent = "Email is incorrect";
         };
+        const telNumber = document.querySelector('#tel');
+        const telError = document.querySelector('.tel-error');
+        telNumber.oninput = function() {
+            let telRegex = RegExp('^[0-9]{2}[\\s][1-9]{1}[0-9]{9}$');
+            if (telRegex.test(telNumber.value)) {
+                telError.textContent = "";
+            } 
+            else telError.textContent = "Invalid Telephone Number!";
+        }
     </script>
 </body>
 
